@@ -100,6 +100,7 @@
   <ItemGroup>
     <Folder Include="images\" />
     <Content Include="Camera.html" />
+    <Content Include="CheckConnection.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
     <Folder Include="merges\ios\" />
