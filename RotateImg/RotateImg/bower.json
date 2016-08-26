@@ -1,0 +1,6 @@
+{
+    "name": "RotateImg",
+  "dependencies": {
+    "jquery": "*"
+  }
+}
