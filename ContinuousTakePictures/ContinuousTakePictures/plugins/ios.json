@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.servbus.PhotoCollector"
+        },
+        "cordova-plugin-continuous-take-pictures": {
+            "PACKAGE_NAME": "com.servbus.PhotoCollector"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.servbus.PhotoCollector"
+        }
+    },
+    "dependent_plugins": {}
+}

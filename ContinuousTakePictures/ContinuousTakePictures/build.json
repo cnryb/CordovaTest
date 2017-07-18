@@ -1,0 +1,35 @@
+{
+  "android": {
+    "release": {
+      "keystore": "",
+      "storePassword": "",
+      "alias": "",
+      "password": "",
+      "keystoreType": ""
+    }
+  },
+  "ios": {
+    "debug": {
+      "buildFlag": [
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT = YES",
+        "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO",
+        "LD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\"",
+        "SWIFT_VERSION = 3.0"
+      ],
+      "codeSignIdentity": "iPhone Developer",
+      "packageType": "development",
+      "developmentTeam": "H2PP9VPMCW"
+    },
+    "release": {
+      "buildFlag": [
+        "EMBEDDED_CONTENT_CONTAINS_SWIFT = YES",
+        "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO",
+        "LD_RUNPATH_SEARCH_PATHS = \"@executable_path/Frameworks\"",
+        "SWIFT_VERSION = 3.0"
+      ],
+      "codeSignIdentity": "iPhone Developer",
+      "packageType": "enterprise",
+      "developmentTeam": "H2PP9VPMCW"
+    }
+  }
+}
