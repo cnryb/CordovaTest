@@ -22,7 +22,7 @@
 
         takePicture();
         $("body")
-            .on("click", "#images div", function (e) {
+            .on("touchend", "#images div", function (e) {
                 e.preventDefault();
                 $("#bigImage").attr("src", $(this).data("src"));
                 $("#bigImage").show();
@@ -31,7 +31,7 @@
                 e.preventDefault();
                 takePicture();
             })
-            .on("click", "#bigImage", function (e) {
+            .on("touchend", "#bigImage", function (e) {
                 e.preventDefault();
                 $(this).hide();
             });
