@@ -20,32 +20,32 @@
         //listeningElement.setAttribute('style', 'display:none;');
         //receivedElement.setAttribute('style', 'display:block;');
 
-        $("#takePicture").click(function (e) {
-            takePicture();
-        });
         takePicture();
+        $("body")
+            .on("click", "#images div", function (e) {
+                e.preventDefault();
+                $("#bigImage").attr("src", $(this).data("src"));
+                $("#bigImage").show();
+            })
+            .on("click", "#takePicture", function (e) {
+                e.preventDefault();
+                takePicture();
+            })
+            .on("click", "#bigImage", function (e) {
+                e.preventDefault();
+                $(this).hide();
+            });
 
     };
     function takePicture() {
         var options = {
             dir: "0tmp"
         };
-        //modusechoswift.echo("hello ",function (msg) {
-        //    console.log(msg);
-
-        //}, function (e) {
-        //    console.log(JSON.stringify(e));
-        //    });
-
 
         cordova.plugins.ContinuousTakePictures.takePictures(function (path) {
             var tsrc = path;
-            tsrc = tsrc.substring(0, tsrc.length - 4)
-            tsrc += "_t.jpg";
-            $("#images :first-child").before("<div style=\"background-image:url('" + tsrc + "')\"></div>")
-
-            console.log(JSON.stringify(s));
-
+            tsrc = tsrc.substring(0, tsrc.length - 4);
+            $("#images :first-child").before("<div data-src=\"" + (tsrc + ".jpg") + "\" style=\"background-image:url('" + (tsrc + "_t.jpg") + "')\"></div>")
         }, function (e) {
             console.log(JSON.stringify(e));
         }, options);

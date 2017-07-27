@@ -29,5 +29,12 @@ body {
     height: 200px;
     background: center center;
     display: inline-block;
-    background-color:Highlight;
+    background-color: Highlight;
+}
+
+#bigImage {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
