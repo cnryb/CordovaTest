@@ -41,11 +41,17 @@
         var options = {
             dir: "0tmp"
         };
+        options.coverTpls = window.localStorage.getItem("coverTpls");
 
-        cordova.plugins.ContinuousTakePictures.takePictures(function (path) {
-            var tsrc = path;
-            tsrc = tsrc.substring(0, tsrc.length - 4);
-            $("#images :first-child").before("<div data-src=\"" + (tsrc + ".jpg") + "\" style=\"background-image:url('" + (tsrc + "_t.jpg") + "')\"></div>")
+        cordova.plugins.ContinuousTakePictures.takePictures(function (res) {
+            if (res.type == "TakePicture") {
+                var tsrc = res.imagePath;
+                tsrc = tsrc.substring(0, tsrc.length - 4);
+                $("#images :first-child").before("<div data-src=\"" + (tsrc + "_z.jpg") + "\" style=\"background-image:url('" + (tsrc + "_t.jpg") + "')\"></div>")
+            } else if (res.type == "Cover") {
+                window.localStorage.setItem("coverTpls",JSON.stringify(res.tpls))
+            }
+
         }, function (e) {
             console.log(JSON.stringify(e));
         }, options);
