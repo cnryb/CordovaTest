@@ -42,14 +42,25 @@
             dir: "0tmp"
         };
         options.coverTpls = window.localStorage.getItem("coverTpls");
+        options.isDrawing = JSON.parse(window.localStorage.getItem("drawingStatus") || false);
+        options.isNeedRecord = JSON.parse(window.localStorage.getItem("needRecordStatus") || false);
 
         cordova.plugins.ContinuousTakePictures.takePictures(function (res) {
+            if (!res) return;
+            
+            console.log(JSON.stringify(res))
             if (res.type == "TakePicture") {
+                //needRecord
+                //rects
                 var tsrc = res.imagePath;
                 tsrc = tsrc.substring(0, tsrc.length - 4);
                 $("#images :first-child").before("<div data-src=\"" + (tsrc + "_z.jpg") + "\" style=\"background-image:url('" + (tsrc + "_t.jpg") + "')\"></div>")
             } else if (res.type == "Cover") {
-                window.localStorage.setItem("coverTpls",JSON.stringify(res.tpls))
+                window.localStorage.setItem("coverTpls", JSON.stringify(res.tpls))
+            } else if (res.type == "DrawingStatus") {
+                window.localStorage.setItem("drawingStatus", JSON.stringify(res.status))
+            } else if (res.type == "NeedRecordStatus") {
+                window.localStorage.setItem("needRecordStatus", JSON.stringify(res.status))
             }
 
         }, function (e) {
