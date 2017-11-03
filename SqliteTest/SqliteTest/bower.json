@@ -1,5 +1,6 @@
 {
-    "name": "SqliteTest",
-    "dependencies": {
-    }
+  "name": "SqliteTest",
+  "dependencies": {
+    "jQuery": "3.2.1"
+  }
 }
