@@ -21,13 +21,26 @@
 
         $("#startTest").click(function (e) {
             //var db = window.sqlitePlugin.openDatabase({ name: 'demo.db', location: 'default' });
+            $("#msg").prepend(`<div> 开始测试</div>`);
+            $("#msg").prepend(`<div></div>`);
+
+            test();
+
+
+        });
+
+
+        var times = 10;
+        var tt = [];
+
+        function test() {
             var start = 0, end = 1000;
             var startTime = new Date().getTime();
+            var t = {};
 
             mediPM.database.init().then(function () {
                 return mediPM.database.clearDb();
             }).then(function () {
-                //$.when.apply( )
                 startTime = new Date().getTime();
 
                 var qs = [];
@@ -36,17 +49,38 @@
                 }
                 return $.when(...qs);
             }).then(function () {
-                $("#msg").prepend(`<div> 写入${end - start}条数据，用时 ${new Date().getTime() - startTime} 毫秒</div>`);
+                t.insert = new Date().getTime() - startTime;
+                $("#msg").prepend(`<div> 写入${end - start}条数据，用时 ${t.insert} 毫秒</div>`);
                 startTime = new Date().getTime();
                 return mediPM.database.executeQuery("SELECT * FROM Demo WHERE id = ?", [end / 2]);
             }).then(function (rows) {
+                t.select = new Date().getTime() - startTime;
                 console.log(rows);
-                $("#msg").prepend(`<div> 随机查询一条数据用时 ${new Date().getTime() - startTime} 毫秒</div>`);
+                $("#msg").prepend(`<div> 随机查询一条数据用时 ${t.select} 毫秒</div>`);
+                tt.push(t);
+                times--;
+                if (times > 0) {
+                    test();
+                } else {
+                    var ttt = {};
+                    ttt.insert = 0;
+                    ttt.select = 0;
+                    for (var i = 0; i < tt.length; i++) {
+                        ttt.insert += tt[i].insert;
+                        ttt.select += tt[i].select;
+                    }
+
+                    ttt.insert = ttt.insert / tt.length;
+                    ttt.select = ttt.select / tt.length;
+
+                    $("#msg").prepend(`<div> 平均写入${end - start}条数据，用时 ${ttt.insert} 毫秒</div>`);
+                    $("#msg").prepend(`<div> 平均随机查询一条数据用时 ${ttt.select} 毫秒</div>`);
+                }
 
             }).fail(function (err) {
                 console.log(err);
             });
-        });
+        }
     };
 
 
