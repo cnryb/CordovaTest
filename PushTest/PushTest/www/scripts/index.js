@@ -58,6 +58,15 @@
             console.log(data);
             if (type == 'cid') {
                 //TODO data = clientid
+
+                //长度40字节，支持中、英文（区分大小写）、数字以及下划线 
+                //测试的时候，别名中混进-短横线，接口返回数据true，但未绑定成功
+                //个推的客服说放在这里比较合适
+                GeTuiSdkPlugin.bindAlias(function (type, data) {
+                    console.log(type);
+                    console.log(data);
+                }, 'android_' + g_account.userId);
+
             } else if (type == 'pid') {
                 //TODO data = 进程pid
             } else if (type == 'payload') {
@@ -66,13 +75,7 @@
                 if (data == 'true') {
                     //TODO 已上线
 
-                    //长度40字节，支持中、英文（区分大小写）、数字以及下划线 
-                    //测试的时候，别名中混进-短横线，接口返回数据true，但未绑定成功
-                    //这个地方在测试过程中，每隔一段时间，就会被调用一次。
-                    GeTuiSdkPlugin.bindAlias(function (type, data) {
-                        console.log(type);
-                        console.log(data);
-                    }, 'android_' + g_account.userId);
+                    
 
                 } else {
                     //TODO 已离线
