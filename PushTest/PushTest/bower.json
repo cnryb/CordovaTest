@@ -1,0 +1,6 @@
+{
+  "name": "PushTest",
+  "dependencies": {
+    "jQuery": "3.2.1"
+  }
+}

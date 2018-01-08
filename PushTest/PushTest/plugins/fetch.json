@@ -1,0 +1,23 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1.2.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-getuisdk": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/GetuiLaboratory/cordova-plugin-getuisdk.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "PUSH_APPID": "SwxWRHaztY5ijhU0wqMZl9",
+            "PUSH_APPKEY": "kJ5S3NS5GyAe4pwfsOaaG9",
+            "PUSH_APPSECRET": "n6iGMMZaFz7opt1XeWTcb3"
+        }
+    }
+}

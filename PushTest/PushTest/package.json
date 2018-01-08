@@ -1,0 +1,27 @@
+{
+  "name": "PushTest",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "cordova-android": "5.2.1",
+    "cordova-ios": "4.2.0",
+    "cordova-windows": "4.4.2",
+    "cordova-plugin-whitelist": "1.2.2",
+    "cordova-plugin-getuisdk": "~1.0.8"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-getuisdk": {
+        "PUSH_APPID": "SwxWRHaztY5ijhU0wqMZl9",
+        "PUSH_APPKEY": "kJ5S3NS5GyAe4pwfsOaaG9",
+        "PUSH_APPSECRET": "n6iGMMZaFz7opt1XeWTcb3"
+      }
+    }
+  }
+}
