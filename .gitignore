@@ -244,3 +244,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 simulation
+/PushTest/PushTest/www/bower_components
