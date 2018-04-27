@@ -1,0 +1,116 @@
+{
+  "name": "cordova-plugin-device",
+  "version": "2.0.2",
+  "description": "Cordova Device Plugin",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "cordova-plugin-device",
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "browser",
+      "osx"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-device.git"
+  },
+  "bugs": {
+    "url": "https://issues.apache.org/jira/browse/CB"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows",
+    "cordova-browser",
+    "cordova-osx"
+  ],
+  "scripts": {
+    "test": "npm run eslint",
+    "eslint": "node node_modules/eslint/bin/eslint www && node node_modules/eslint/bin/eslint src && node node_modules/eslint/bin/eslint tests"
+  },
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-device#readme",
+  "_id": "cordova-plugin-device@2.0.2",
+  "_shasum": "fc08f3722e67eef7b6c67bfc99a83df6add0baba",
+  "_resolved": "https://registry.npm.taobao.org/cordova-plugin-device/download/cordova-plugin-device-2.0.2.tgz",
+  "_from": "cordova-plugin-device@latest",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "6.6.0",
+  "_npmUser": {
+    "name": "stevegill",
+    "email": "stevengill97@gmail.com"
+  },
+  "dist": {
+    "shasum": "fc08f3722e67eef7b6c67bfc99a83df6add0baba",
+    "size": 37237,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/cordova-plugin-device/download/cordova-plugin-device-2.0.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "jcesarmobile",
+      "email": "jcesarmobile@gmail.com"
+    },
+    {
+      "name": "macdonst",
+      "email": "simon.macdonald@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-device_2.0.2_1523945189482_0.27753081894529075"
+  },
+  "_hasShrinkwrap": false,
+  "publish_time": 1523945189580,
+  "_cnpm_publish_time": 1523945189580
+}

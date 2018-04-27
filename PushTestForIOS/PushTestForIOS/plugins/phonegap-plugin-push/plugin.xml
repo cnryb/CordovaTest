@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:amazon="http://schemas.android.com/apk/lib/com.amazon.device.ads" xmlns:rim="http://www.blackberry.com/ns/widgets" id="phonegap-plugin-push" version="2.2.2">
+  <name>PushPlugin</name>
+  <description>    This plugin allows your application to receive push notifications on Android, iOS and Windows devices.    Android uses Firebase Cloud Messaging.    iOS uses Apple APNS Notifications.    Windows uses Microsoft WNS Notifications.  </description>
+  <license>MIT</license>
+  <js-module src="www/push.js" name="PushNotification">
+    <clobbers target="PushNotification"/>
+  </js-module>
+  <engines>
+    <engine name="cordova" version=">=7.1.0"/>
+    <engine name="cordova-ios" version=">=4.5.0"/>
+  </engines>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="PushNotification">
+        <param name="ios-package" value="PushPlugin"/>
+      </feature>
+    </config-file>
+    <config-file target="*-Info.plist" parent="UIBackgroundModes">
+      <array>
+        <string>remote-notification</string>
+      </array>
+    </config-file>
+    <config-file target="*-Debug.plist" parent="aps-environment">
+      <string>development</string>
+    </config-file>
+    <config-file target="*-Release.plist" parent="aps-environment">
+      <string>production</string>
+    </config-file>
+    <source-file src="src/ios/AppDelegate+notification.m"/>
+    <source-file src="src/ios/PushPlugin.m"/>
+    <header-file src="src/ios/AppDelegate+notification.h"/>
+    <header-file src="src/ios/PushPlugin.h"/>
+    <framework src="FirebaseMessaging" type="podspec" spec="~> 2.0.0"/>
+    <framework src="PushKit.framework"/>
+  </platform>
+  
+</plugin>
