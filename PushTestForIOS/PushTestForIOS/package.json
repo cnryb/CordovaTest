@@ -1,7 +1,17 @@
 {
-    "name": "PushTestForIOS",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
+  "name": "PushTestForIOS",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "cordova-ios": "4.5.0",
+    "cordova-plugin-whitelist": "^1.2.2"
+  },
+  "cordova": {
+    "platforms": [
+      "ios"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
     }
+  }
 }

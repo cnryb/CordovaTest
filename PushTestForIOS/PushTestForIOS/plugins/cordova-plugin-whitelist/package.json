@@ -1,0 +1,97 @@
+{
+  "name": "cordova-plugin-whitelist",
+  "version": "1.2.2",
+  "description": "Cordova Whitelist Plugin",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-whitelist.git"
+  },
+  "keywords": [
+    "cordova",
+    "whitelist",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0"
+    }
+  ],
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-whitelist/issues"
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-whitelist#readme",
+  "_id": "cordova-plugin-whitelist@1.2.2",
+  "_shasum": "08593fc9578856209d437b76c8b047529f19f623",
+  "_resolved": "https://registry.npm.taobao.org/cordova-plugin-whitelist/download/cordova-plugin-whitelist-1.2.2.tgz",
+  "_from": "cordova-plugin-whitelist@1.2.2",
+  "scripts": {},
+  "_npmVersion": "3.5.3",
+  "_nodeVersion": "5.4.1",
+  "_npmUser": {
+    "name": "stevegill",
+    "email": "stevengill97@gmail.com"
+  },
+  "dist": {
+    "shasum": "08593fc9578856209d437b76c8b047529f19f623",
+    "size": 18600,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/cordova-plugin-whitelist/download/cordova-plugin-whitelist-1.2.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "jcesarmobile",
+      "email": "jcesarmobile@gmail.com"
+    },
+    {
+      "name": "macdonst",
+      "email": "simon.macdonald@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
+    },
+    {
+      "name": "surajpindoria",
+      "email": "suraj.pindoria@yahoo.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-whitelist-1.2.2.tgz_1461189898558_0.8843274090904742"
+  },
+  "directories": {},
+  "publish_time": 1461189901270,
+  "_cnpm_publish_time": 1461189901270,
+  "_hasShrinkwrap": false
+}
