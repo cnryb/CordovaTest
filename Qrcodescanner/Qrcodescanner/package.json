@@ -1,0 +1,27 @@
+{
+  "name": "Qrcodescanner",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "cordova-android": "6.4.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-add-swift-support": "^1.7.2",
+    "cordova-plugin-qrcodescanner": "git+https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+    "cordova-plugin-whitelist": "^1.2.2",
+    "cordova-windows": "4.4.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-qrcodescanner": {
+        "CAMERA_USAGE_DESCRIPTION": "扫码"
+      },
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-add-swift-support": {}
+    },
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  }
+}

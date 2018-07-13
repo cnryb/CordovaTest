@@ -1,0 +1,64 @@
+{
+  "_from": "git+https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+  "_id": "cordova-plugin-qrcodescanner@0.0.1",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-qrcodescanner",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+    "rawSpec": "https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+    "saveSpec": "git+https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+    "fetchSpec": "https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/servbus/cordova-plugin-qrcodescanner.git#0d0c8a6dc93617066aadf6d3abe80f5a3bec4e61",
+  "_spec": "https://github.com/servbus/cordova-plugin-qrcodescanner.git",
+  "_where": "D:\\code\\CordovaTest\\Qrcodescanner\\Qrcodescanner",
+  "author": {
+    "name": "servbus"
+  },
+  "bugs": {
+    "url": "https://github.com/servbus/cordova-plugin-qrcodescanner/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-qrcodescanner",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "You can use the QRCodeScanner plugin to scan barcodes and QRCode(using the device's camera).",
+  "devDependencies": {
+    "jasmine-node": "1.14.5",
+    "pluginpub": "^0.0.5"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/servbus/cordova-plugin-qrcodescanner#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova:plugin"
+  ],
+  "license": "apache",
+  "name": "cordova-plugin-qrcodescanner",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/servbus/cordova-plugin-qrcodescanner.git"
+  },
+  "scripts": {},
+  "version": "0.0.1"
+}

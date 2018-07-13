@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.servbus.Test"
+    },
+    "cordova-plugin-qrcodescanner": {
+      "CAMERA_USAGE_DESCRIPTION": "扫码",
+      "PACKAGE_NAME": "com.servbus.Test"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.servbus.Test"
+    }
+  },
+  "dependent_plugins": {}
+}
